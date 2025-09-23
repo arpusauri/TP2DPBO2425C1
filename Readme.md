@@ -4,8 +4,9 @@ Saya Arya Purnama Sauri dengan NIM 2408521 mengerjakan Tugas Praktikum 2 dalam m
 # Attributes dan Methods
 
 
-# Diagram
-<img width="146" height="587" alt="TP2_Diagram drawio" src="https://github.com/user-attachments/assets/9dd84a0d-a151-4668-b60d-aaeffd54b285" />
+# Desain Diagram
+<img width="622" height="241" alt="TP2_Diagram drawio" src="https://github.com/user-attachments/assets/3ccaac0d-047b-44e1-bb64-f4ce80f30c38" />
+
 
 # Alur Program (pada bahasa C++)
 1.
