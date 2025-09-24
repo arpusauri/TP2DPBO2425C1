@@ -1,7 +1,11 @@
+Command :
 1 = Tampil Data
 2 = Tambah Data (id_kategori, nama_kategori, deskripsi, merk, model, tahun_produksi, nama_barang, harga, stok)
 3 = Exit Program
- 
+
+Compile (compile di folder Python/Program):
+py main.py
+
 Contoh Testcase 1 :
 K006
 Tablet

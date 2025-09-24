@@ -1,6 +1,11 @@
+Command :
 1 = Tampil Data
 2 = Tambah Data (id_kategori, nama_kategori, deskripsi, merk, model, tahun_produksi, nama_barang, harga, stok)
 3 = Exit Program
+
+Compile (compile di root folder bukan dalam folder Java atau Program):
+javac Java/Program/*.java
+java Java.Program.Main
  
 Contoh Testcase 1 :
 K006

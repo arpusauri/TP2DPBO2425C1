@@ -1,3 +1,4 @@
+# include detailbarang saja
 from DetailBarang import DetailBarang
 
 # dataBarang akan menyimpan semua objek DetailBarang
@@ -89,7 +90,7 @@ def tambahData():
 
 # main program
 if __name__ == "__main__":
-    # data awal (5 objek)
+    # data awal
     dataBarang.append(DetailBarang("K001", "Laptop", "Kategori untuk laptop",
                                    "ASUS", "ROG", 2025,
                                    "ASUS ROG Zephyrus G14", 33999000, 19))

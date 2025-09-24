@@ -2,14 +2,16 @@
 from Kategori import Kategori
 
 class Barang(Kategori):
+    # constructor
     def __init__(self, id_kategori="", nama_kategori="", deskripsi="",
                  merk="", model="", tahun_produksi=0):
-        super().__init__(id_kategori, nama_kategori, deskripsi)
+                
+        super().__init__(id_kategori, nama_kategori, deskripsi) # manggil parent constructor kategori
         self.__merk = merk
         self.__model = model
         self.__tahun_produksi = tahun_produksi
 
-    # getter
+    # getters
     def get_merk(self):
         return self.__merk
     def get_model(self):
@@ -17,7 +19,7 @@ class Barang(Kategori):
     def get_tahun_produksi(self):
         return self.__tahun_produksi
 
-    # setter
+    # setters
     def set_merk(self, merk):
         self.__merk = merk
     def set_model(self, model):
