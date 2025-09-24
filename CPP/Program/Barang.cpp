@@ -1,19 +1,23 @@
 #include <iostream>
+// include file kategori
 #include "Kategori.cpp"
 
 using namespace std;
 
-class Barang : public Kategori {
+class Barang : public Kategori { // inheritance dari class Kategori
+    // atribut private
     private:
         string merk;
         string model;
         int tahun_produksi;
 
     public:
+        // constructor kosong
         Barang(){}
 
-        Barang(string id, string nama, string deskripsi, 
-            string merk, string model, int tahun_produksi) : Kategori(id, nama, deskripsi) {
+        // constructor
+        Barang(string id_kategori, string nama_kategori, string deskripsi, 
+            string merk, string model, int tahun_produksi) : Kategori(id_kategori, nama_kategori, deskripsi) { // manggil constructor parent
             this->merk = merk;
             this->model = model;
             this->tahun_produksi = tahun_produksi;

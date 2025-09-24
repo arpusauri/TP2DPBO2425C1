@@ -1,7 +1,8 @@
 #include <iostream>
 #include <iomanip>
 #include <vector>
-#include "DetailBarang.cpp"   // pastikan ada Kategori.cpp, Barang.cpp, DetailBarang.cpp
+// include file detail barang
+#include "DetailBarang.cpp"
 
 using namespace std;
 
@@ -34,8 +35,8 @@ vector<int> hitungLebarKolom(const vector<DetailBarang>& list) {
     };
 
     for (auto &b : list) {
-        lebar[0] = max(lebar[0], (int)b.getID().size());
-        lebar[1] = max(lebar[1], (int)b.getNama().size());
+        lebar[0] = max(lebar[0], (int)b.getIDKategori().size());
+        lebar[1] = max(lebar[1], (int)b.getNamaKategori().size());
         lebar[2] = max(lebar[2], (int)b.getDeskripsi().size());
         lebar[3] = max(lebar[3], (int)b.getMerk().size());
         lebar[4] = max(lebar[4], (int)b.getModel().size());
@@ -79,8 +80,8 @@ void tampilkanData() {
 
     // data
     for (auto &b : dataBarang) {
-        cout << left << setw(lebar[0] + 3) << b.getID()
-             << setw(lebar[1] + 3) << b.getNama()
+        cout << left << setw(lebar[0] + 3) << b.getIDKategori()
+             << setw(lebar[1] + 3) << b.getNamaKategori()
              << setw(lebar[2] + 3) << b.getDeskripsi()
              << setw(lebar[3] + 3) << b.getMerk()
              << setw(lebar[4] + 3) << b.getModel()
@@ -98,14 +99,14 @@ void tampilkanData() {
 
 // fungsi untuk menambahkan data baru
 void tambahData() {
-    string id, nama, deskripsi, merk, model, nama_barang;
+    string id_kategori, nama_kategori, deskripsi, merk, model, nama_barang;
     int tahun_produksi, stok;
     double harga;
 
     cout << "\n=== Input Barang Baru ===\n";
     cin.ignore();
-    cout << "ID Kategori     : "; getline(cin, id);
-    cout << "Nama Kategori   : "; getline(cin, nama);
+    cout << "ID Kategori     : "; getline(cin, id_kategori);
+    cout << "Nama Kategori   : "; getline(cin, nama_kategori);
     cout << "Deskripsi       : "; getline(cin, deskripsi);
     cout << "Merk            : "; getline(cin, merk);
     cout << "Model           : "; getline(cin, model);
@@ -115,29 +116,30 @@ void tambahData() {
     cout << "Harga           : "; cin >> harga;
     cout << "Stok            : "; cin >> stok;
 
-    dataBarang.push_back(DetailBarang(id, nama, deskripsi, merk, model, tahun_produksi,
+    dataBarang.push_back(DetailBarang(id_kategori, nama_kategori, deskripsi, merk, model, tahun_produksi,
                                       nama_barang, harga, stok));
     cout << "\nData berhasil ditambahkan!\n";
 }
 
 int main() {
     // data awal
-    dataBarang.push_back(DetailBarang("K001", "Laptop", "Elektronik untuk komputasi",
-                                      "ASUS", "ROG Strix", 2023,
-                                      "ASUS ROG Strix G15", 22000000, 5));
-    dataBarang.push_back(DetailBarang("K002", "Smartphone", "Elektronik untuk komunikasi",
-                                      "Samsung", "Galaxy S23", 2023,
-                                      "Samsung Galaxy S23 Ultra", 18000000, 10));
-    dataBarang.push_back(DetailBarang("K003", "TV", "Elektronik hiburan",
-                                      "LG", "OLED C2", 2022,
-                                      "LG OLED55C2", 15000000, 4));
-    dataBarang.push_back(DetailBarang("K004", "Kamera", "Elektronik fotografi",
-                                      "Canon", "EOS R5", 2021,
-                                      "Canon EOS R5 Mirrorless", 60000000, 2));
-    dataBarang.push_back(DetailBarang("K005", "Headphone", "Elektronik audio",
-                                      "Sony", "WH-1000XM5", 2022,
-                                      "Sony WH-1000XM5", 6000000, 7));
-
+    dataBarang.push_back(DetailBarang("K001", "Laptop", "Kategori untuk laptop",
+                                      "ASUS", "ROG", 2025,
+                                      "ASUS ROG Zephyrus G14", 33999000, 19));
+    dataBarang.push_back(DetailBarang("K002", "Smartphone", "Kategori untuk Smartphone/Handphone",
+                                      "Samsung", "Galaxy S", 2025,
+                                      "Samsung Galaxy S25 Ultra", 18999000, 34));
+    dataBarang.push_back(DetailBarang("K003", "TV", "Kategori untuk televisi",
+                                      "Samsung", "The Frame", 2025,
+                                      "Samsung The Frame 4K 65\"", 24499000, 28));
+    dataBarang.push_back(DetailBarang("K004", "Kamera", "Kategori untuk kamera",
+                                      "Canon", "EOS", 2018,
+                                      "Canon EOS 3000D", 6499000, 22));
+    dataBarang.push_back(DetailBarang("K005", "Headset", "Kategori untuk headset/headphone",
+                                      "Steelseries", "Arctis", 2022,
+                                      "Steelseries Arctis Nova Pro Wireless", 5999000, 12));
+    
+    // untuk pilihan menu
     int pilihan;
     do {
         tampilkanMenu();

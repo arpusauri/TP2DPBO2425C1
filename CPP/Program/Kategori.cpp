@@ -3,38 +3,40 @@
 using namespace std;
 
 class Kategori{
+    // atribut private
     private:
-        string id;
-        string nama;
+        string id_kategori; // id kategori (string) agar bisa kombinasi
+        string nama_kategori;
         string deskripsi;
 
     public:
-        Kategori(){
-        }
+        // constructor kosong
+        Kategori(){}
 
-        Kategori(string id, string nama, string deskripsi){
-            this->id = id;
-            this->nama = nama;
+        // constructor
+        Kategori(string id_kategori, string nama_kategori, string deskripsi){
+            this->id_kategori = id_kategori;
+            this->nama_kategori = nama_kategori;
             this->deskripsi = deskripsi;
         }
 
         // getter
-        string getID() const {
-            return id;
+        string getIDKategori() const {
+            return id_kategori;
         }
-        string getNama() const {
-            return nama;
+        string getNamaKategori() const {
+            return nama_kategori;
         }
         string getDeskripsi() const {
             return deskripsi;
         }
 
         // setter
-        void setID(string id) {
-            this->id = id;
+        void setIDKategori(string id_kategori) {
+            this->id_kategori = id_kategori;
         }
-        void setNama(string nama) {
-            this->nama = nama;
+        void setNamaKategori(string nama_kategori) {
+            this->nama_kategori = nama_kategori;
         }
         void setDeskripsi(string deskripsi) {
             this->deskripsi = deskripsi;
