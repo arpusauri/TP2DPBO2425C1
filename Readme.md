@@ -73,7 +73,11 @@ Saya Arya Purnama Sauri dengan NIM 2408521 mengerjakan Tugas Praktikum 2 dalam m
 
 
 2. Python
+<img width="303" height="130" alt="tampilan_menu" src="https://github.com/user-attachments/assets/4fa858c3-f211-4238-a002-bc4c1137469d" />
 
-3. Java
 
-4. PHP
+4. Java
+<img width="304" height="126" alt="tampilan_menu" src="https://github.com/user-attachments/assets/e3555e84-4376-446e-9cf6-d5c01bf2058b" />
+
+
+6. PHP
