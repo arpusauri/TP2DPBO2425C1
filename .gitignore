@@ -1,3 +1,5 @@
 # Ignore file yang gk dibutuhin cuy
-CPP/Program/main.exe
 .vscode/
+CPP/Program/main.exe
+Python/Program/__pycache__/
+Python/main.pyc
