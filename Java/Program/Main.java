@@ -5,9 +5,10 @@ import java.util.List;
 import java.util.Scanner;
 
 public class Main {
+    // untuk menyimpan data
     static List<DetailBarang> dataBarang = new ArrayList<>();
 
-    // tampilkan menu
+    // untuk menampilkan menu awal
     static void tampilkanMenu() {
         System.out.println();
         System.out.println("=====================================");
@@ -19,7 +20,7 @@ public class Main {
         System.out.println("=====================================");
     }
 
-    // hitung lebar kolom
+    // untuk menghitung lebar kolom sesuai size
     static int[] hitungLebarKolom(List<DetailBarang> list) {
         String[] header = {"ID", "Kategori", "Deskripsi", "Merk", "Model",
                            "Tahun", "Nama Barang", "Harga", "Stok"};
@@ -42,7 +43,7 @@ public class Main {
         return lebar;
     }
 
-    // tampilkan tabel
+    // untuk menampilkan seluruh data
     static void tampilkanData() {
         if (dataBarang.isEmpty()) {
             System.out.println("\nData masih kosong.\n");
@@ -57,7 +58,7 @@ public class Main {
         }
         System.out.println();
 
-        // header
+        // header (table dinamis)
         System.out.printf("%-" + (lebar[0] + 3) + "s", "ID");
         System.out.printf("%-" + (lebar[1] + 3) + "s", "Kategori");
         System.out.printf("%-" + (lebar[2] + 3) + "s", "Deskripsi");
@@ -96,7 +97,7 @@ public class Main {
         System.out.println();
     }
 
-    // tambah data
+    // untuk menambah data sesuai dengan input
     static void tambahData(Scanner sc) {
         sc.nextLine(); // clear buffer
         System.out.println("\n=== Input Barang Baru ===");
