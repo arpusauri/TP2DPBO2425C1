@@ -81,3 +81,5 @@ Saya Arya Purnama Sauri dengan NIM 2408521 mengerjakan Tugas Praktikum 2 dalam m
 
 
 6. PHP
+<img width="1318" height="530" alt="tampilkan_data" src="https://github.com/user-attachments/assets/328af11f-00eb-467d-9a30-0136c41691ef" />
+
