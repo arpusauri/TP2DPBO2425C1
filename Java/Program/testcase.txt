@@ -1,0 +1,14 @@
+1 = Tampil Data
+2 = Tambah Data (id_kategori, nama_kategori, deskripsi, merk, model, tahun_produksi, nama_barang, harga, stok)
+3 = Exit Program
+ 
+Contoh Testcase 1 :
+K006
+Tablet
+Kategori untuk tablet
+Apple
+iPad Air
+2025
+Apple iPad Air M3
+14999000
+8
